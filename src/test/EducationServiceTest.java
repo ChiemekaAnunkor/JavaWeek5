@@ -36,35 +36,7 @@ public class EducationServiceTest {
 
     @Test
     public void testStudentsByClass(){
-//        //Given
-//        Student chiemeka = new Student("Chiemeka Anunkor", "Java");
-//        Student emmanuel = new Student("Emmanuel Dada", "Java");
-//        Student eric = new Student("Eric Drake", "Java");
-//        Student ezekiel = new Student("Ezekiel Thawngcung", "Java");
-//        Student hatice = new Student("Hatice Kacer-Kaymaz", "Java");
-//        Student lan = new Student("Lan Kostrikin", "Java");
-//        Student sajedeh = new Student("Sajedeha Ahmadi", "Java");
 //
-//        Student abdul = new Student("Abdulaziz", "Data");
-//        Student sonalee = new Student("Sonalee Bhattacharyya", "Data");
-//
-//        Student paul = new Student("Paul Okoh", "WebDev");
-//        Student nutan = new Student("Nutan Pal", "WebDev");
-//        Student erick = new Student("Erick Estrada", "WebDev");
-//
-//        List<Student> allStudents = Arrays.asList(chiemeka, emmanuel, eric, ezekiel, hatice, lan, sajedeh, abdul,
-//                sonalee, paul, nutan, erick);
-//
-//        given(studentDataObject.getAllStudents()).willReturn(allStudents);
-//
-//        //When
-//        List<Student> javaStudents = clientBusinessObjectImpl.getAllStudentsBySubject("Java");
-//
-//        //Then
-//        assertThat(javaStudents, hasSize(7));
-//        assertThat(javaStudents, hasItems(chiemeka, emmanuel, eric, ezekiel, hatice, lan, sajedeh));
-
-        // Given
         Student studentJM = new Student("Joy Ma", "Spanish");
         Student studentJH = new Student("Julio Hernandez", "Algebra");
         Student studentJJ = new Student("Jenny Jones", "Calculus");
@@ -85,11 +57,10 @@ public class EducationServiceTest {
     public void testMarkInactive() {
 
         // Given
-        Class geometry = new Class("Geometry", "summer 2022");
-        Class envSci = new Class("Environmental Science", "Fall 2022");
-        Class compLit = new Class<String>("Comparative Literature", "Spring 2023");
-        List<Class> allClasses = Arrays.asList(geometry, envSci, compLit);
-
+        alog.Class geometry = new alog.Class("Geometry", "summer 2022");
+        alog.Class envSci = new alog.Class("Environmental Science", "Fall 2022");
+        alog.Class compLit = new alog.Class("Comparative Literature", "Spring 2023");
+        List<alog.Class> allClasses = Arrays.asList(geometry, envSci, compLit);.
         given(classDataObject.getAllClasses()).willReturn(allClasses);
 
         // When
@@ -111,11 +82,10 @@ public class EducationServiceTest {
     @Captor
     ArgumentCaptor<Class> classArgumentCaptor;
 
-// Next:
+
 
     @Test
     public void testMarkInactive_argumentCaptor() {
-        // Given
         alog.Class geometry = new alog.Class("Geometry", "summer 2022");
         alog.Class envSci = new alog.Class("Environmental Science", "Fall 2022");
         alog.Class compLit = new alog.Class("Comparative Literature", "Spring 2023");
