@@ -6,6 +6,9 @@ public class ClassDataObject {
 
     public Object getAllClasses() {
         Object str = new Object();
-        return  str
+        return  str;
+    }
+
+    public void markInactive(java.lang.Class capture) {
     }
 }

@@ -7,6 +7,7 @@ import org.mockito.*;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
+import java.lang.Class;
 import java.util.Arrays;
 import java.util.List;
 
@@ -80,13 +81,12 @@ public class EducationServiceTest {
     }
 
 
-
     @Test
     public void testMarkInactive() {
 
         // Given
         Class geometry = new Class("Geometry", "summer 2022");
-        Class envSci = new Class<Object.class>("Environmental Science", "Fall 2022");
+        Class envSci = new Class("Environmental Science", "Fall 2022");
         Class compLit = new Class<String>("Comparative Literature", "Spring 2023");
         List<Class> allClasses = Arrays.asList(geometry, envSci, compLit);
 
@@ -116,10 +116,10 @@ public class EducationServiceTest {
     @Test
     public void testMarkInactive_argumentCaptor() {
         // Given
-        Class geometry = new Class(“Geometry”, “Summer 2022);
-        Class envSci = new Class(“Environmental Science”, Fall 2022);
-        Class compLit = new Class("Comparative Literature", "Spring 2023");
-        List<Class> allClasses = Arrays.asList(geometry, envSci, compLit);
+        alog.Class geometry = new alog.Class("Geometry", "summer 2022");
+        alog.Class envSci = new alog.Class("Environmental Science", "Fall 2022");
+        alog.Class compLit = new alog.Class("Comparative Literature", "Spring 2023");
+        List<alog.Class> allClasses = Arrays.asList(geometry, envSci, compLit);
 
         given(classDataObject.getAllClasses()).willReturn(allClasses);
 
